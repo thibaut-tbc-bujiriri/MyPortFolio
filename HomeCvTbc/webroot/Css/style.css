@@ -129,6 +129,14 @@ body{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan
 }
+.btn-box i{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    right: 10px;
+    top: 3px;
+}
 .btn-box:hover{
     box-shadow: 0 0 5px cyan,
     0 0 25px cyan,0 0 50px cyan,
@@ -350,6 +358,9 @@ section{
 .progress-line.react span{
     width: 50%;
 }
+.progress-line.flutter span{
+    width: 55%;
+}
 .progress-line span::after{
     position: absolute;
     padding: 1px 8px;
@@ -376,6 +387,9 @@ section{
 }
 .progress-line.react span::after{
     content: "50%";
+}
+.progress-line.flutter span::after{
+    content: "55%";
 }
 .progress-line span::before{
     content: "";
@@ -602,12 +616,21 @@ section{
     margin-bottom: 10px;
     display: block;
 }
+.contact-list li a{
+    text-decoration: none;
+    color: white;
+}
 .contact-list i{
    display: inline-block;
    color: #0ef;
    font-size: 20px;
    font-weight: 600;
    transform: all .40s ease;
+}
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+    cursor: pointer;
 }
 .contact-list li:hover{
     transform: scale(1.01) translateY(-5px);

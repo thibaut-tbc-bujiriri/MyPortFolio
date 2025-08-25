@@ -1,18 +1,17 @@
 <?php
-$User = 'roodt';
+$User = 'root';
 $Password = '';
-try{
-    $mysqlclient = new PDO('mysql:host=localhost:8080;Dbname=thibautportfolio',$User,$Password );
-}catch(PDOException $e){
-    print 'Erreur : '.$e->getMessage().'<br>';
+
+try {
+    $mysqlclient = new PDO(
+        'mysql:host=localhost;port=3307;dbname=thibautportfolio;charset=utf8',
+        $User,
+        $Password
+    );
+    $mysqlclient->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connexion réussie à la base MySQL !";
+} catch (PDOException $e) {
+    echo 'Erreur : '.$e->getMessage().'<br>';
     die;
 }
-$mysqlclient = 'SELECT * FROM thibautportfolio';
-
-
-
-//    $Nom = $_POST["nom"];
-//    $Email = $_POST["mail"];
-//    $Sujet = $_POST["sujet"];
-//    $Message = $_POST["message"];
 ?>
